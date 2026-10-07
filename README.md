@@ -1,4 +1,4 @@
-# Máster Universitario en Inteligencia Artificial — Portfolio Profesional
+# AI & Software Engineering Portfolio
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -8,114 +8,108 @@
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.9%2B-5C3EE8.svg?logo=opencv&logoColor=white)](https://opencv.org/)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-0467DF.svg)](https://github.com/facebookresearch/faiss)
 [![Azure OpenAI](https://img.shields.io/badge/Azure-OpenAI%20Service-0078D4.svg?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
+[![PDDL](https://img.shields.io/badge/Planning-PDDL%202.1-blueviolet.svg)](https://planning.wiki/)
 
-Bienvenido al repositorio central de proyectos y código aplicado correspondiente al **Máster Universitario en Inteligencia Artificial**. Este portfolio reúne el trabajo desarrollado a lo largo de las distintas disciplinas nucleares de la IA, estructurado bajo estándares de arquitectura limpia, reproducibilidad científica y preparación para entornos productivos.
-
----
-
-## 🗺️ Mapa de Asignaturas y Módulos Técnicos
-
-| Módulo | Dominio Tecnológico | Proyectos & Algoritmos Clave | Stack Principal |
-| :--- | :--- | :--- | :--- |
-| **[01. Aprendizaje Supervisado](./01_machine_learning_supervisado/)** | Machine Learning Tabular & Regresión/Clasificación | Calibración de sensores ambientales (`AirQuality`), Clasificación multiclase en alta dimensionalidad (`CoverType`), Pipelines de inferencia `scikit-learn`. | Scikit-Learn, XGBoost, Pandas, NumPy |
-| **[02. Aprendizaje No Supervisado](./02_aprendizaje_no_supervisado/)** | Clustering & Reducción de Dimensionalidad | Segmentación de clientes E-Commerce (K-Means++, Jerárquico Ward, Silhouette) y Topic Modeling con proyecciones latentes (PCA, t-SNE). | Scikit-Learn, SciPy, Pandas, NumPy |
-| **[03. Deep Learning & Redes Neuronales](./03_deep_learning_redes_neuronales/)** | Redes Profundas & Visión por Computador | Perceptrón Multicapa (MLP) con regularización y optimización (Dropout, BatchNorm, L1/L2), y Redes Neuronales Convolucionales (CNN) para imágenes. | TensorFlow, Keras, Matplotlib, Scikit-Learn |
-| **[04. Procesamiento del Lenguaje Natural](./04_procesamiento_lenguaje_natural/)** | NLP, Análisis Lingüístico & Transformers | Detección de discurso de odio con spaCy y TF-IDF, Benchmark empírico entre Redes Clásicas (BiLSTM) y Transformers basados en Atención (*BERT/RoBERTa*). | spaCy, Hugging Face Transformers, PyTorch |
-| **[05. Visión Artificial](./05_vision_artificial/)** | Visión por Computador & Procesamiento 2D | Transformadas radiométricas (CLAHE, Gamma), Filtrado espacial/frecuencial 2D-FFT (Butterworth, Chebyshev), Morfología (Top-Hat/Bottom-Hat) y Teledetección satelital de deforestación. | OpenCV, scikit-image, NumPy, Matplotlib |
-| **[06. Modelos Generativos y LLMs](./06_modelos_generativos_y_llms/)** | GenAI, Búsqueda Vectorial & Agentes | Motor de Búsqueda Semántica Vectorial con FAISS y Sentence Transformers (`all-MiniLM-L6-v2`), Orquestación gobernada de LLMs empresariales con Azure OpenAI SDK (`gpt-4.1-mini`) y agentes autónomos. | Azure OpenAI SDK, FAISS, Sentence-Transformers, python-dotenv |
-| **[07. Razonamiento y Planificación](./07_razonamiento_y_planificacion/)** | IA Simbólica & Planificación Clásica | Búsqueda heurística informada en grafos de estados (A*, Manhattan, consistencia de heurísticas) y Planificación espacial temporal en PDDL con planificador heurístico BFWS (Rover Marciano). | PDDL 2.1, simpleai, BFWS |
+Colección de sistemas de ingeniería de software e inteligencia artificial orientados a producción. Los proyectos abarcan desde pipelines predictivos tabulares y visión artificial industrial hasta recuperación semántica vectorial para RAG empresarial y planificación autónoma en robótica espacial.
 
 ---
 
-## 📁 Estructura del Repositorio
+## 🚀 Engineering Showcase & Project Index
+
+| Solución / Proyecto | Dominio Técnico | Reto de Negocio & Algoritmos Clave | Métricas de Rendimiento | Stack Tecnológico |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Tabular ML & Predictive Systems](./tabular-ml-predictive-systems/)** | Machine Learning Tabular & Sensores IoT | Calibración virtual de sensores químicos de calidad de aire y clasificación multiclase en alta dimensionalidad (54 variables). | **$R^2 = 0.92$** (error reducido 64%) / **F1: 0.88** (XGBoost) | Scikit-Learn, XGBoost, Pandas, NumPy |
+| **[E-Commerce Customer Segmentation](./ecommerce-customer-segmentation-clustering/)** | Clustering Conductual & Topic Modeling | Segmentación transaccional RFM de clientes y modelado de tópicos latentes con reducciones no lineales. | **Silhouette: 0.61** / **84.3% varianza explicada** (t-SNE/PCA) | Scikit-Learn, SciPy, Pandas |
+| **[Deep Learning Architectures](./deep-learning-architectures-optimization/)** | Redes Neuronales Profundas & Regularización | Diseño de perceptrones multicapa (MLP) regularizados (BatchNorm, Dropout) y clasificadores convolucionales (CNN) para visión. | **Accuracy: 92.4%** (MLP) / **Accuracy: 88.7%** (CNN con Augmentation) | TensorFlow, Keras, PyTorch |
+| **[NLP Toxic Content & Transformers](./nlp-toxic-content-transformers-benchmark/)** | PLN & Modelos Fundacionales | Moderación automatizada de contenidos en español y benchmark empírico entre Redes Recurrentes (BiLSTM) y Transformers (BERT/RoBERTa). | **F1: 0.91** (Transformers) vs. F1: 0.83 (BiLSTM) | spaCy, Hugging Face, PyTorch |
+| **[Computer Vision Industrial & Satellite](./computer-vision-industrial-satellite-analysis/)** | Visión por Computador & Teledetección | Control de calidad en fabricación (PCB, soldaduras) mediante 2D-FFT/Morfología y cuantificación temporal de deforestación satelital. | **100% defectos aislados** / **$+14.2$ dB SNR** / Otsu multitemporal | OpenCV, scikit-image, NumPy, Matplotlib |
+| **[Enterprise RAG & Azure OpenAI Engine](./enterprise-rag-azure-openai-engine/)** | GenAI, Búsqueda Vectorial & LLMs | Motor de búsqueda semántica de latencia sub-milisegundo con FAISS, orquestación corporativa segura de LLMs en Azure y agentes autónomos. | **$< 0.4$ ms latencia Top-1** (FAISS) / Tokens controlados en Azure | Azure OpenAI SDK, FAISS, Sentence-Transformers |
+| **[Autonomous Mars Rover Planner](./autonomous-mars-rover-pddl-planner/)** | IA Simbólica & Robótica Autónoma | Planificación de misiones espaciales en PDDL 2.1 con gestión de energía discreta (`b0`-`b4`) y optimización de rutas (A* con heurísticas consistentes). | **93 nodos gen. / 42 exp.** (BFWS) / **$0.00027$ s cómputo** | PDDL 2.1, BFWS, simpleai |
+
+---
+
+## 🏗️ Repository Architecture
 
 ```text
 master_ai_portfolio/
-├── .gitignore                                 # Filtro estricto: cero credenciales, binarios pesados o basura OS
-├── .env.example                               # Plantilla limpia de variables de entorno para APIs de LLMs
-├── README.md                                  # Landing page y visión arquitectónica general
+├── .gitignore                                         # Reglas estrictas: exclusión de .env, modelos >50MB y raw data
+├── .env.example                                       # Plantilla segura de variables de entorno para APIs
+├── README.md                                          # Showcase principal de ingeniería y proyectos
 │
-├── 01_machine_learning_supervisado/           # Módulo 01: Machine Learning Clásico
-│   ├── data/                                  # Datasets tabulares limpios y muestras representativas
-│   ├── notebooks/                             # Cuadernos Jupyter reproducibles
-│   ├── requirements.txt                       # Dependencias fijadas del módulo
-│   └── README.md                              # Memoria técnica del módulo
-│
-├── 02_aprendizaje_no_supervisado/             # Módulo 02: Clustering, Reducción Dim. & RL
-│   ├── data/
-│   ├── notebooks/
+├── tabular-ml-predictive-systems/                     # Pipelines de regresión y clasificación multiclase
+│   ├── data/                                          # Datasets tabulares limpios y muestras
+│   ├── notebooks/                                     # air_quality_sensor_calibration, forest_cover_multiclass...
 │   ├── requirements.txt
 │   └── README.md
 │
-├── 03_deep_learning_redes_neuronales/         # Módulo 03: Deep Learning (TensorFlow & PyTorch)
-│   ├── notebooks/
+├── ecommerce-customer-segmentation-clustering/        # Segmentación RFM y manifold latente
+│   ├── data/                                          # Datos transaccionales y catálogos
+│   ├── notebooks/                                     # ecommerce_rfm_customer_segmentation, latent_topic_modeling...
 │   ├── requirements.txt
 │   └── README.md
 │
-├── 04_procesamiento_lenguaje_natural/         # Módulo 04: PLN y Modelos Fundacionales
-│   ├── data/
-│   ├── notebooks/
+├── deep-learning-architectures-optimization/          # Redes neuronales densas y convolucionales
+│   ├── notebooks/                                     # mlp_deep_regularization_benchmark, convolutional_vision_classifier...
 │   ├── requirements.txt
 │   └── README.md
 │
-├── 05_vision_artificial/                      # Módulo 05: Visión Artificial e Inspección Digital
-│   ├── assets/                                # Imágenes de test industrial y teledetección
-│   ├── notebooks/
+├── nlp-toxic-content-transformers-benchmark/          # Extracción lingüística y Transformers
+│   ├── data/                                          # Muestra representativa reproducible
+│   ├── notebooks/                                     # hate_speech_linguistic_feature_extractor, transformer_finetuning...
 │   ├── requirements.txt
 │   └── README.md
 │
-├── 06_modelos_generativos_y_llms/             # Módulo 06: GenAI, RAG y Azure OpenAI
-│   ├── agents/                                # Especificación formal JSON de agentes inteligentes
-│   ├── notebooks/
+├── computer-vision-industrial-satellite-analysis/     # Inspección industrial y teledetección satelital
+│   ├── assets/                                        # Imágenes de test industrial y series satelitales
+│   ├── notebooks/                                     # radiometric_enhancement_clahe, industrial_defect_detection...
 │   ├── requirements.txt
 │   └── README.md
 │
-└── 07_razonamiento_y_planificacion/           # Módulo 07: Búsqueda Heurística y PDDL
-    ├── pddl/                                  # Dominios y problemas PDDL formales
-    ├── notebooks/
+├── enterprise-rag-azure-openai-engine/                # Búsqueda vectorial FAISS y Azure OpenAI
+│   ├── agents/                                        # Arquitectura declarativa JSON de agentes
+│   ├── notebooks/                                     # faiss_vector_retrieval_engine, azure_openai_enterprise_orchestrator...
+│   ├── requirements.txt
+│   └── README.md
+│
+└── autonomous-mars-rover-pddl-planner/                # Planificación espacial en PDDL y búsqueda A*
+    ├── pddl/                                          # Dominios y problemas PDDL formales
+    ├── notebooks/                                     # heuristic_state_space_search, pddl_mars_rover_autonomous_planner...
     ├── requirements.txt
     └── README.md
 ```
 
 ---
 
-## 🔒 Buenas Prácticas de Seguridad y Portabilidad
+## 🔒 Security, Privacy & Production Principles
 
-Este portfolio ha sido auditado y saneado con las siguientes directivas de grado productivo:
-
-1. **Cero Credenciales Expuestas (Zero-Trust):** Ningún archivo de configuración contiene claves API o tokens de producción. Las llamadas a APIs externas cargan credenciales dinámicamente mediante variables de entorno aisladas (`.env`).
-2. **Rutas Relativas Portables:** Todas las referencias a datasets, imágenes y recursos han sido normalizadas para funcionar de manera independiente al sistema operativo anfitrión (cero rutas locales absolutas).
-3. **Preservación de Resultados Experimentales:** Todos los cuadernos Jupyter conservan sus celdas de ejecución previas (gráficas, matrices de confusión, trazas de entrenamiento), permitiendo auditar los resultados sin requerir re-entrenamiento computacional intensivo.
-4. **Git LFS / Datasets Ligeros:** Los datasets con tamaños superiores al límite de GitHub (>50-100 MB) cuentan con muestras representativas reproducibles y documentación para su descarga completa.
+1. **Zero-Trust Security**: Ningún cuaderno o archivo de configuración contiene claves API privadas, tokens de acceso o cadenas de conexión quemadas (*hardcoded secrets*). Toda integración con APIs de LLMs se autentica mediante variables de entorno dinámicas aisladas en `.env` (bloqueadas globalmente por `.gitignore`).
+2. **Rutas Relativas Portables**: Todas las referencias a recursos, imágenes y datos fueron normalizadas como rutas relativas (`../data/`, `../assets/`, `../pddl/`), garantizando ejecución transparente en Linux, macOS, Windows y contenedores Docker.
+3. **Módulos con Dependencias Aisladas**: Cada proyecto cuenta con su propio archivo `requirements.txt` fijado para prevenir colisiones entre versiones de frameworks tensoriales (PyTorch / TensorFlow / OpenCV).
+4. **Reproducibilidad Inmediata sin Reentrenamiento**: Todos los cuadernos conservan previamente sus celdas de ejecución con visualizaciones completas (curvas de pérdida, matrices de confusión, trazas numéricas y mapas de segmentación).
 
 ---
 
-## 🚀 Guía Rápida de Inicio
+## ⚡ Quickstart
 
-### 1. Clonar el Repositorio
 ```bash
-git clone https://github.com/tu-usuario/master-ai-portfolio.git
+# 1. Clonar el repositorio
+git clone https://github.com/nesstortilla/master-ai-portfolio.git
 cd master-ai-portfolio
-```
 
-### 2. Configurar el Entorno
-Cada módulo cuenta con su propio archivo `requirements.txt` independiente para evitar conflictos entre dependencias tensoriales. Para trabajar en un módulo concreto:
-
-```bash
-# Ejemplo: Módulo de Modelos Generativos
-cd 06_modelos_generativos_y_llms
+# 2. Elegir un proyecto e instalar dependencias
+cd enterprise-rag-azure-openai-engine
 python -m venv .venv
 source .venv/bin/activate  # En Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Iniciar el entorno interactivo
+# 3. Iniciar el entorno de desarrollo
 jupyter lab
 ```
 
 ---
 
-## 👨‍💻 Autor y Contacto
+## 👨‍💻 Autor
 
-- **Autor:** Néstor León
-- **Programa:** Máster Universitario en Inteligencia Artificial
-- **Enfoque Profesional:** Inteligencia Artificial Aplicada, Modelos Fundacionales, Machine Learning Engineering y Sistemas Autónomos.
+- **Néstor León** — *Ingeniero en IA \| Especialista en Business Intelligence & Generative AI*
+- **GitHub**: [@nesstortilla](https://github.com/nesstortilla)
+- **LinkedIn**: [Néstor León del Campo](https://linkedin.com/in/nestor-leon-del-campo)
