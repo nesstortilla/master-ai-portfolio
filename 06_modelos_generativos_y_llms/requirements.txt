@@ -1,0 +1,8 @@
+# Module 06: Modelos Generativos, LLMs y Agentes Inteligentes
+openai>=1.14.0
+sentence-transformers>=2.5.0
+faiss-cpu>=1.7.4
+python-dotenv>=1.0.0
+numpy>=1.24.0
+torch>=2.2.0
+jupyter>=1.0.0

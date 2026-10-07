@@ -1,0 +1,74 @@
+# --- Environment & Credentials ---
+.env
+*.env
+!.env.example
+secrets.json
+credentials.json
+*.pem
+*.key
+token.json
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Python & Jupyter Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Heavy Model Weights & Binary Artifacts (>50MB) ---
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.bin
+*.onnx
+*.pkl
+*.joblib
+*.pb
+*.tflite
+models/checkpoints/
+checkpoints/
+
+# --- Heavy Datasets & Archives ---
+*.tar.gz
+*.zip
+*.7z
+*.rar
+# NLP and Tabular massive raw datasets (>50MB):
+*comentarios_limpio_utf8.csv
+*02Dataset_anonimizado.csv
+*transactions.csv
+*data.csv
+
+# --- Multimedia & Course Recordings ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+
+# --- macOS & System Metadata ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# --- IDEs & Editors ---
+.idea/
+.vscode/
+*.swp
+*.swo

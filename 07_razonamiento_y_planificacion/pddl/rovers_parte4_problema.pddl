@@ -1,0 +1,82 @@
+(define (problem rovers_parte4_problema) 
+(:domain rovers_parte4_dominio)
+(:objects
+    general - lander
+    colour - mode
+    rover0 rover1 rover2 - rover
+    rover0store rover1store rover2store - store
+    waypoint0 waypoint1 waypoint2 waypoint3 - waypoint
+    camera0 - camera
+    objective0 - objective
+    b0 b1 b2 b3 b4 b5 - blevel
+    bat0 bat1 bat2 - battery
+    ruedas oruga patas - traction
+    tierra rocoso pendiente - surface
+)
+(:init
+    (visible waypoint0 waypoint1) (visible waypoint1 waypoint0)
+    (visible waypoint1 waypoint2) (visible waypoint2 waypoint1)
+    (visible waypoint2 waypoint3) (visible waypoint3 waypoint2)
+    (surface_type waypoint0 waypoint1 tierra)
+    (surface_type waypoint1 waypoint0 tierra)
+    (surface_type waypoint1 waypoint2 rocoso)
+    (surface_type waypoint2 waypoint1 rocoso)
+    (surface_type waypoint2 waypoint3 pendiente)
+    (surface_type waypoint3 waypoint2 pendiente)
+    (compatible ruedas tierra)
+    (compatible oruga tierra) (compatible oruga rocoso)
+    (compatible patas tierra) (compatible patas rocoso) (compatible patas pendiente)
+    (distinto rover0 rover1) (distinto rover1 rover0)
+    (distinto rover0 rover2) (distinto rover2 rover0)
+    (distinto rover1 rover2) (distinto rover2 rover1)
+    (at_soil_sample waypoint2)
+    (at_rock_sample waypoint3)
+    (at_lander general waypoint0)
+    (channel_free general)
+    (at rover0 waypoint0)
+    (available rover0)
+    (store_of rover0store rover0)
+    (empty rover0store)
+    (equipped_for_soil_analysis rover0)
+    (traction_type rover0 ruedas)
+    (battery_installed rover0 bat0 b4 b2)
+    (at rover1 waypoint0)
+    (available rover1)
+    (store_of rover1store rover1)
+    (empty rover1store)
+    (equipped_for_rock_analysis rover1)
+    (traction_type rover1 oruga)
+    (battery_installed rover1 bat1 b4 b2)
+    (at rover2 waypoint0)
+    (available rover2)
+    (store_of rover2store rover2)
+    (empty rover2store)
+    (traction_type rover2 patas)
+    (battery_installed rover2 bat2 b4 b4)
+    (can_traverse rover0 waypoint0 waypoint1)
+    (can_traverse rover0 waypoint1 waypoint0)
+    (can_traverse rover0 waypoint1 waypoint2)
+    (can_traverse rover0 waypoint2 waypoint1)
+    (can_traverse rover1 waypoint0 waypoint1)
+    (can_traverse rover1 waypoint1 waypoint0)
+    (can_traverse rover1 waypoint1 waypoint2)
+    (can_traverse rover1 waypoint2 waypoint1)
+    (can_traverse rover1 waypoint2 waypoint3)
+    (can_traverse rover1 waypoint3 waypoint2)
+    (can_traverse rover2 waypoint0 waypoint1)
+    (can_traverse rover2 waypoint1 waypoint0)
+    (can_traverse rover2 waypoint1 waypoint2)
+    (can_traverse rover2 waypoint2 waypoint1)
+    (can_traverse rover2 waypoint2 waypoint3)
+    (can_traverse rover2 waypoint3 waypoint2)
+    (lower b0 b1) (lower b1 b2) (lower b2 b3) (lower b3 b4) (lower b4 b5)
+)
+
+(:goal (and
+    (communicated_soil_data waypoint2)
+    (communicated_rock_data waypoint3)
+    (at rover0 waypoint0)
+    (at rover1 waypoint0)
+    (at rover2 waypoint0)
+))
+)
