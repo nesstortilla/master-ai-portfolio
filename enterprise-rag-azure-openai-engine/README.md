@@ -19,7 +19,7 @@ Motor empresarial de Inteligencia Artificial Generativa: Recuperación Semántic
    - **Reto de Seguridad & Gobernanza**: Integrar modelos de lenguaje masivos (`gpt-4.1-mini`) garantizando cumplimiento estricto de privacidad de datos (datos no utilizados para entrenamiento público), aislamiento de red, filtros de seguridad de contenido y cero credenciales quemadas en el código fuente.
    - **Solución**: Desarrollé un cliente modular y seguro utilizando el SDK oficial `AzureOpenAI` (v1.x), desacoplando la configuración mediante variables de entorno aisladas (`.env`), con control fino de hiperparámetros estocásticos (`temperature`, `top_p`, penalties) y manejo de fallback controlado.
 
-3. **Arquitectura Declarativa de Agentes Autónomos (`agents/intelligent_tutor_agent_architecture.json`)**:
+3. **Arquitectura Declarativa de Agentes Autónomos (`agents/enterprise_ai_agent_architecture.json`)**:
    - **Capacidad**: Especificación formal de un sistema multi-herramienta con memoria contextual, prompts de sistema desacoplados y reglas deontológicas de ejecución para asistencia técnica inteligente.
 
 ---
@@ -34,7 +34,7 @@ Motor empresarial de Inteligencia Artificial Generativa: Recuperación Semántic
 ```text
 enterprise-rag-azure-openai-engine/
 ├── agents/
-│   └── intelligent_tutor_agent_architecture.json  # Especificación declarativa de agentes inteligentes
+│   └── enterprise_ai_agent_architecture.json  # Especificación declarativa de agentes inteligentes
 ├── notebooks/
 │   ├── faiss_vector_retrieval_engine.ipynb        # Pipeline vectorial con FAISS y Sentence Transformers
 │   └── azure_openai_enterprise_orchestrator.ipynb # Orquestación empresarial en Azure OpenAI

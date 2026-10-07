@@ -302,7 +302,7 @@
         "inputAnchors": [],
         "inputs": {
           "conditionAgentModel": "groqChat",
-          "conditionAgentInstructions": "<p>Eres un agente de decisión para triaje de preguntas educativas.</p><p>Debes elegir EXACTAMENTE un escenario: Conceptual, Practical o Admin.</p><p>Criterios:</p><p>- Conceptual → explicación de teoría o definiciones.</p><p>- Practical → resolución de ejercicios o cálculos.</p><p>- Admin → preguntas sobre plazos, notas o entregas.</p><p>Prioridad:</p><p>- Si hay números, ecuaciones, o palabras como \"calcula\", \"resuelve\" o \"deriva\" → Practical.</p><p>- Si hay “qué es / por qué / diferencia” → Conceptual.</p><p>- Si hay plazos o notas → Admin.</p><p>OBLIGATORIO: Devuelve SOLO JSON válido. Cero texto adicional. Cero formato markdown.</p><p>Ejemplo de tu única salida permitida:</p><p>{\"output\": \"Practical\"}</p>",
+          "conditionAgentInstructions": "<p>Eres un agente de decisión para triaje de preguntas educativas.</p><p>Debes elegir EXACTAMENTE un escenario: Conceptual, Practical o Admin.</p><p>Criterios:</p><p>- Conceptual → explicación de teoría o definiciones.</p><p>- Practical → resolución de ejercicios o cálculos.</p><p>- Admin → preguntas sobre plazos, hitos o entregables técnicos.</p><p>Prioridad:</p><p>- Si hay números, ecuaciones, o palabras como \"calcula\", \"resuelve\" o \"deriva\" → Practical.</p><p>- Si hay “qué es / por qué / diferencia” → Conceptual.</p><p>- Si hay plazos o hitos → Admin.</p><p>OBLIGATORIO: Devuelve SOLO JSON válido. Cero texto adicional. Cero formato markdown.</p><p>Ejemplo de tu única salida permitida:</p><p>{\"output\": \"Practical\"}</p>",
           "conditionAgentInput": "<p></p>",
           "conditionAgentScenarios": [
             {
@@ -369,7 +369,7 @@
       },
       "data": {
         "id": "agentAgentflow_0",
-        "label": "ConceptualTutor",
+        "label": "ConceptualAdvisor",
         "version": 3.2,
         "name": "agentAgentflow",
         "type": "Agent",
@@ -817,7 +817,7 @@
           "agentMessages": [
             {
               "role": "system",
-              "content": "<p>Eres un tutor conceptual. Explica el tema con claridad:</p><p>Define el concepto.</p><p>Da un ejemplo cotidiano.</p><p>Da un ejemplo del curso.</p><p>Termina con dos preguntas de comprobación rápida.</p>"
+              "content": "<p>Eres un asesor conceptual. Explica el tema con claridad:</p><p>Define el concepto.</p><p>Da un ejemplo cotidiano.</p><p>Da un ejemplo del proyecto.</p><p>Termina con dos preguntas de comprobación rápida.</p>"
             }
           ],
           "agentTools": "",
@@ -866,7 +866,7 @@
       },
       "data": {
         "id": "agentAgentflow_1",
-        "label": "PracticalTutor",
+        "label": "TechnicalAdvisor",
         "version": 3.2,
         "name": "agentAgentflow",
         "type": "Agent",
@@ -1314,7 +1314,7 @@
           "agentMessages": [
             {
               "role": "system",
-              "content": "<p>Eres un tutor práctico. Resuelve el ejercicio paso a paso:</p><p>Enumera los pasos.</p><p>Explica brevemente cada paso.</p><p>Muestra la comprobación final.</p><p>Si faltan datos, indícalo.</p>"
+              "content": "<p>Eres un asesor técnico. Resuelve el ejercicio paso a paso:</p><p>Enumera los pasos.</p><p>Explica brevemente cada paso.</p><p>Muestra la comprobación final.</p><p>Si faltan datos, indícalo.</p>"
             }
           ],
           "agentTools": "",
@@ -1812,7 +1812,7 @@
           "agentMessages": [
             {
               "role": "system",
-              "content": "<p>Eres un asistente administrativo del curso.</p><p>Responde sobre plazos, evaluación, entregas y recursos.</p><p>Si no tienes la información exacta, ofrece una respuesta genérica</p><p>y sugiere revisar la guía docente o consultar al profesor.</p>"
+              "content": "<p>Eres un asistente administrativo del proyecto.</p><p>Responde sobre plazos, evaluación, entregas y recursos.</p><p>Si no tienes la información exacta, ofrece una respuesta genérica</p><p>y sugiere revisar la especificación del proyecto o consultar al Lead Engineer.</p>"
             }
           ],
           "agentTools": "",
